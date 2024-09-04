@@ -1,0 +1,393 @@
+.bt1 .container {
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #E6E6E6;
+}
+.bt2 .container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #E6E6E6;
+}
+.bt2 button {
+    background-color: #4CAF50;
+    color: #fafafa;
+    height: 35px;
+    width: 80px;;
+    border: none;
+    border-radius: 3px;
+
+}
+.bt3 {
+    background-color:#333333;
+    color: aliceblue;
+    padding: 10px;
+}
+.bt3 span {
+    padding-right: 10px;
+}
+.bt4 {
+    background-color: #333333;
+    color: #fafafa;
+    text-align: center;
+    padding: 10px;
+}
+
+.bt5 .title {
+    border: 1px solid #B2ADA5;
+    width: 800px;
+    background-color: #F9F9F9;
+    padding: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.bt6 .container {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #B2ADA5 ;
+    text-align: center;
+    margin: auto;
+}
+.bt6 .circle{
+   
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border: 0px solid black;
+    border-radius: 50%;
+    overflow: hidden; /* Ẩn phần ảnh vượt ra ngoài hình tròn */
+    margin: 0 auto; /*căn giữa hình tròn*/
+
+    
+    
+}
+.bt7 .container {
+    width: 700px;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    background-color: #F9F9F9;
+    
+}
+.bt7 .contact-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+   
+}
+.bt7 input {
+    width: 300px;
+    height: 25px;
+    
+}
+.bt7 button {
+    width: 50px;
+    height: 30px;
+    color: #fafafa;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+}
+.bt8 {
+    background-color: #7F7F7F;
+    height: 600px;
+    
+}
+.bt8 .modal {
+    border: 1px solid white;
+    background-color: #fafafa;
+    color: black;
+    width: 250px;
+    height: 130px;
+    text-align: center;
+    position: relative;
+    bottom: -200px;
+    margin: auto;
+}
+.bt8 button {
+    background-color: #4CAF50;
+    color: #fafafa;
+    border: none;
+    height: 22px;
+
+}
+.bt9 .container {
+    width: 450px;
+    border: 1px solid black;
+    background-color:#DAE8FC ;
+    margin: auto;
+    padding: 10px 24px;
+}
+.bt9 h1 {
+    width: 400px;
+    border: 1px solid #E6BA57;
+    background-color:#FFE6CC;
+    font-weight: lighter;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+.bt9 p {
+    width: 400px;
+    border: 1px solid #C77A79;
+    background-color:#F8CECC;
+    margin: 10px;
+    padding: 20px 10px;
+}
+.bt9 button {
+    border-radius: 3px;
+    background-color: #1BA1E2 ;
+    color: #fafafa;
+    border: none;
+    padding: 6px;
+
+}
+
+
+
+.bt10 {
+    background-color: #7F7F7F;
+    
+
+
+}
+.bt10 .container {
+    position: relative;
+    width: 500px;
+    height: 450px;
+}
+.bt10 .box {
+    position: absolute;
+    padding: 30px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px;
+            
+
+}
+#M1 { background-color: #60A917; top: 120px; left: 0; }
+
+#M2 { background-color: #008A00; top: 0; left: 220px; }
+
+#M3 { background-color: #388DBD; top: 120px; right: -150px; }
+
+#M4 { background-color: #A20025; top: 250px; right: -150px; }
+
+#M5 { background-color: #D80073; bottom: 0; left: 220px; }
+
+#M6 { background-color:#0050EF; top: 250px; left: 0; }
+
+#target { background-color: #FFE6CC; color: black; top: 180px; left: 220px;  }
+.bt11 {
+    height: 400px;
+}
+.bt11 .sidebar {
+    width: 200px;
+    height: 350px;
+   border: 1px solid #98B1D3;
+    background-color: #DAE8FC;
+    padding: 10px;
+    position: relative;
+}
+.bt11 .menu-item {
+    background-color: #FFF2CC;
+    border: 1px solid #DABC62;
+    margin: 10px  ;
+    padding: 10px;
+    text-align: center;
+    height: 30px;
+    font-size: 20px;
+    
+}
+.bt11 .submenu {
+    display: none;
+    position: absolute;
+    left: 210px;
+    top: 40px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+.bt11 .submenu .submenu-item {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.bt11 .menu-item:hover .submenu {
+    display: block;
+}
+.bt12 {
+    height: 300px;
+}
+.bt12 .sidebar {
+    width: 250px;
+    height: 20px;
+    background-color: #DAE8FC;
+    border: 1px solid #98B1D3;
+    padding: 10px;
+    position: relative;
+    margin: 10px;
+}
+.bt12 .menu-item {
+    background-color: #FFF2CC;
+    border: 1px solid #DABC62;
+    padding: 10px;
+    text-align: center;
+    
+}
+.bt12 .submenu {
+    display: none;
+    position: absolute;
+    left: 210px;
+    top: 40px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+.bt12 .submenu .submenu-item {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.bt12 .menu-item:hover .submenu {
+    display: block;
+}
+.bt13 {
+    font-family: Arial, sans-serif;
+    background-color: #e0f0ff;
+    margin: auto;
+    padding: 20px;
+    width: 600px;
+}
+
+.bt13 .container {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.bt13 .paragraph {
+    margin: 0 0 20px;
+}
+
+.bt13 .menu-item {
+    background-color: #D80073;
+    border: 1px solid #D60071;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+}
+
+.bt13 .submenu {
+    display: none;
+    position: absolute;
+    left: -150px; /* Đặt submenu bên trái nút Delete */
+    top: -40px;   /* Đặt submenu trên nút Delete */
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1;
+}
+
+.bt13 .submenu-item {
+    text-align: center;
+    color: #0c5460;
+}
+
+.bt13 .menu-item:hover .submenu {
+    display: block; /* Hiển thị submenu khi di chuột */
+}
+
+.bt13 button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+   
+}
+
+.keep-button {
+    background-color: #007bff;
+    color: white;
+}
+.bt14 .container {
+    width: 400px;
+    margin: auto;
+}
+.cost {
+    font-size: 25px;
+    color: #2B6CB0;
+}
+.buy {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3182CE;
+    color: #fafafa;
+}
+.add {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color:#fafafa ;
+    color: #3182CE;
+}
+.bt15 {
+    width: 400px;
+}
+.infor {
+    display: flex;
+    
+    
+}
+.infor img {
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 15px; /* Khoảng cách giữa hình ảnh và văn bản */
+
+
+
+}
+.bt15 button {
+    padding: 10px;
+    width: 100px;
+    margin: 10px;
+    border: none;
+    color: black;
+    background-color: white;
+}
+
+
+
+.bt16 .container {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    
+}
+
+.progress {
+    background-color: #e0e0e0;
+    margin-bottom: 15px;
+    
+}
+
+.progress-bar {
+    background-color: #4caf50;
+    
+   
+}
+
+

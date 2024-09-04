@@ -1,0 +1,27 @@
+/* h1 {
+    background-image: url(https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg);
+} */
+ .container{
+    width: 400px;
+    background: rgb(137, 186, 203);
+    padding: 20px 24px;
+ }
+h1 {
+    margin: 0px;
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+}
+p {
+    border: 1px solid black;
+    padding: 12px 8px;
+    background-color: rgb(205, 157, 138);
+
+}
+button {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    color: aliceblue;
+    background-color: rgb(97, 110, 118);
+}

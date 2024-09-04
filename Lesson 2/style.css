@@ -1,0 +1,170 @@
+.bt1 {
+    background-color:black;
+    color: aliceblue;
+    padding: 20px;
+}
+.bt1 span {
+    padding-right: 10px;
+}
+.bt2 td {
+    padding-right: 150px;
+    
+}
+.bt3 {
+    border: 1px solid lightgrey;
+    width: 400px;
+    padding-left: 40px;
+}
+.bt3 input {
+    padding: 8px 75px;
+
+}
+.bt3 button {
+
+    color: aliceblue;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    border: none;
+    
+}
+.bt4 input {
+    margin-bottom: 20px;
+}
+
+.bt6 {
+   
+    flex-direction: column; /* Xếp chồng các phần tử theo chiều dọc */
+    align-items: center; 
+    text-align: center; 
+    
+}
+.bt6 .box1 {
+    
+    padding:10px 25px;
+    font-size: 18px;
+  
+    margin: auto;
+    color: aliceblue;
+    background-color:#8598CC;
+}
+
+.bt6 .text {
+    color: #00AEEF;
+}
+.bt6 p {
+   
+    color: #6F7172;
+}
+.bt6 button {
+    
+    background-color: black;
+    color: azure;
+    border: none;
+    padding: 10px 20px;
+}
+.bt7 {
+    background-image: url("https://c.pxhere.com/photos/dc/cb/umbrellas_sky_rain_colorful_parasol_cover_shelter-715913.jpg!s2");
+    text-align: center;
+    filter:grayscale(50%);
+    color: #fafafa;
+}
+.bt7 button {
+    background-color: red;
+    color: #fafafa;
+    padding: 10px;
+
+}
+.bt8 {
+    text-align: center;
+    
+
+
+}
+.bt8 .container {
+    background-color: #F2F2F2;
+    width: 600px;
+    margin: auto;
+
+}
+.bt8 p {
+    color: #6F7172;
+    
+}
+.bt8 input {
+    padding: 10px;
+    width: 250px;
+}
+.bt8 button {
+    margin: 20px;
+    padding: 10px;
+    background-color: #70CBCE;
+    color: #fafafa;
+    border: none;
+
+}
+.bt9 .container {
+    width: 600px;
+    margin: auto;
+
+}
+.bt9 .box-bt9 {
+   width: 400px;
+    background-color: #CCCCCC ;
+    text-align: center;
+    padding: 100px ;
+    font-size: 60px;
+    color: #fafafa;
+    font-weight: lighter;
+}
+.bt9 p {
+    color:#B0B0B0;
+}
+.bt9 button {
+    color: #fafafa;
+    background-color: #01BACF;
+    width: 100px;
+    height: 40px;
+    border: none;
+}
+
+.bt10 .container {
+    width: 400px;
+    margin: auto;
+    
+}
+.bt10 button {
+    margin: 6px;
+    color: #fafafa;
+    background-color:#01BACF;
+    border: none;
+    width: 90px;
+    height: 30px;
+
+}
+.bt11 .container {
+   
+}
+.bt11 .input-1 {
+    width: 300px;
+    margin: 5px;
+    height: 30px;
+}
+.bt11 .input-2 {
+    margin: 5px;
+    width: 622px;
+    height: 30px;
+}
+.bt11 textarea {
+    margin: 5px;
+}
+.bt11 button {
+    margin: 5px;
+   height: 30px;
+   border: none;
+   color: #fafafa;
+   background-color: #00AEEF;
+   border-radius: 3px;
+}
+
