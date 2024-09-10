@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box; /*thuộc tính width và height sẽ tự động bao gồm luôn content, padding và border, còn chiều rộng của content sẽ tự động co giãn tương ứng*/
+
+        }
+        body {
+            margin: 0; /*sát lề*/
+        }
+        .header {
+            background-color: #92DFCB;
+            padding: 20px;
+            text-align: center;
+            padding: 20px;
+
+        }
+        .content {
+            background-color: #CAEFF2;
+            padding: 20px;
+            height: 600px;
+            width: 70%;
+            float: left;
+
+
+        }
+        .aside {
+            background-color: #F2D8CA ;
+            padding: 20px;
+            height: 600px;
+            width: 30%;
+            float: right;
+
+
+        }
+        .section-two {
+            margin-top: 10px;
+        }
+        .box {
+            background-color: #F2F1CA;
+            padding: 20px;
+            height: 150px;
+            width: calc(25% - 7.5px);
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .box:nth-child(4) {
+            margin-right: 0;
+        }
+        .footer {
+            background-color: #EECBF3;
+            padding: 20px;
+        }
+        .clear-both {
+            clear: both;
+        }
+    </style>
+    
+    <header class="header">
+        Header
+    </header>
+    <div class="section-one">
+        <div class="content">Content</div>
+        <div class="aside">Aside</div>
+    </div>
+    <div class="clear-both"></div>
+
+    <div class="section-two">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+    </div> 
+    <div class="clear-both"></div>
+    <footer class="footer">
+        Footer
+    </footer>
+
+</body>
+</html>

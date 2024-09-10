@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f5da;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #f9e7ac;
+    padding: 10px 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.logo {
+    background-color: #a1d99b;
+    padding: 10px;
+    margin-right: 10px; /* Khoảng cách giữa logo và brand name */
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; 
+}
+
+.nav-links a, .login-btn {
+    text-decoration: none;
+    background-color: #f9bfbf;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #000;
+}
+
+.login-btn {
+    background-color: #a1d99b;
+    border: none;
+}
+
+.user-icon {
+    background-color: #a1d99b;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f9e7ac;
+    padding: 15px;
+    width: 100%;
+}
+
+.icon {
+    text-align: center;
+    flex: 1;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
