@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-size: 15px;
+        }
+
+        header {
+            background-color: #FFF2CC;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo::before {
+            content: '';
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #E1D5E7;
+            border: 1px solid #C1ABCB;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .cart {
+            background-color: #d9eaff;
+            border: 1px solid lightskyblue;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .form-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 100px;
+        }
+
+        .form-section div {
+            width: 60%;
+            padding: 20px 30px;
+            border: 1px solid black;
+            background-color: #fff;
+        }
+
+        .form-section input[type="text"],
+        .form-section input[type="number"] {
+            width: 90%; 
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-section label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            
+        }
+       
+        .payment-method label {
+            border: 1px solid lightgrey;
+            padding: 8px;
+            
+
+        }
+
+        .cart-section {
+            margin: 0 100px;
+        }
+
+       
+        .cart-item {
+            display: flex;
+            flex-direction: column; 
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .item-info {
+            display: flex;
+            align-items: center; 
+            justify-content: space-between;
+        }
+
+        .item-select {
+            margin-right: 10px; 
+        }
+
+        .image-placeholder {
+            width: 200px;
+            height: 100px;
+            background-color: #F5F5F5;
+            border: 2px solid lightgrey;
+            margin-right: 10px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item-name {
+            width: 100%;
+            margin-top: -10px;
+            font-weight: bold;
+        }
+
+        .remove-btn {
+            background-color: #FFCCCC;
+          
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-left: 10px; 
+        }
+
+        .item-options {
+            display: flex; 
+            margin-top: 5px; 
+            align-items:flex-start; 
+            justify-content: space-between; 
+        }
+
+        .option-buttons {
+            display: flex; 
+        }
+
+        .option-button {
+            background-color: #B0E3E6;
+            border: 1px solid lightseagreen;
+            margin-top: -30px;
+            margin-right: -180px;
+            margin-left: 190px; 
+          
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center; 
+            justify-content: space-between; 
+            margin-top: 5px; 
+        }
+
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .remove-btn {
+            background-color: #FFCCCC;
+            border: 1px solid lightcoral;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .total {
+            font-weight: bold;
+            margin-top: -20px;
+            margin-right: 60px;
+        }
+
+        .submit-order {
+            margin: 0 100px;
+            text-align: left; 
+        }
+
+        .submit-order button {
+            padding: 10px 20px;
+            background-color: #DAE8FC;
+            border: 1px solid lightseagreen;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        footer {
+            background-color: #FFF2CC;
+            padding: 10px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        footer p {
+            margin: 5px 0;
+            display: inline-block;
+        }
+
+        footer p + p {
+            margin-left: 20px;
+        }
+
+        footer h4 {
+            margin: 0 2px;
+        } 
+       .in4 {
+       margin: 0 100px;
+       
+       }
+     
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">My Shop</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Contact</a>
+            <div class="cart">My Cart (0)</div>
+        </nav>
+    </header>
+
+    <main>
+        <h3 class="in4">Your information</h3>
+        <section class="form-section">
+            <div class="your-info">
+                <label for="fullname">Full name <span style="color: red;">*</span></label>
+                <input type="text" id="fullname" placeholder="Full name">
+        
+                <label for="phone">Phone number <span style="color: red;">*</span></label>
+                <input type="text" id="phone" placeholder="Phone number">
+        
+                <label for="address">Address <span style="color: red;">*</span></label>
+                <input type="text" id="address" placeholder="Address">
+            </div>
+        
+            <div class="payment-method">
+                <h3>Payment method <span style="color: red;">*</span></h3>
+                <label><input type="radio" name="payment" checked> Credit card</label><br>
+                <label><input type="radio" name="payment"> Your bank</label><br>
+                <label><input type="radio" name="payment"> Momo</label>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <h3>Cart</h3>
+
+            <div class="cart-item">
+                <div class="item-info">
+                    <input type="checkbox" class="item-select">
+                    <div class="image-placeholder">IMAGE</div>
+                    <p class="item-name">Lorem ipsum dolor</p>
+                    <input type="number" value="2" class="quantity-input">
+                    <button class="remove-btn">Remove</button>
+                </div>
+                <div class="item-options">
+                    <div class="option-buttons">
+                        <button class="option-button">Blue</button>
+                        <button class="option-button">Classic</button>
+                    </div>
+                    <p class="total">Total: $210</p>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-info">
+                    <input type="checkbox" class="item-select">
+                    <div class="image-placeholder">IMAGE</div>
+                    <p class="item-name">Lorem ipsum dolor</p>
+                    <input type="number" value="2" class="quantity-input">
+                    <button class="remove-btn">Remove</button>
+                </div>
+                <div class="item-options">
+                    <div class="option-buttons">
+                        <button class="option-button">Blue</button>
+                        <button class="option-button">Classic</button>
+                    </div>
+                    <p class="total">Total: $210</p>
+                </div>
+            </div>
+
+
+            <div class="cart-item">
+                <div class="item-info">
+                    <input type="checkbox" class="item-select">
+                    <div class="image-placeholder">IMAGE</div>
+                    <p class="item-name">Lorem ipsum dolor</p>
+                    <input type="number" value="2" class="quantity-input">
+                    <button class="remove-btn">Remove</button>
+                </div>
+                <div class="item-options">
+                    <div class="option-buttons">
+                        <button class="option-button">Blue</button>
+                        <button class="option-button">Classic</button>
+                    </div>
+                    <p class="total">Total: $210</p>
+                </div>
+            </div>
+
+
+            <div class="cart-item">
+                <div class="item-info">
+                    <input type="checkbox" class="item-select">
+                    <div class="image-placeholder">IMAGE</div>
+                    <p class="item-name">Lorem ipsum dolor</p>
+                    <input type="number" value="2" class="quantity-input">
+                    <button class="remove-btn">Remove</button>
+                </div>
+                <div class="item-options">
+                    <div class="option-buttons">
+                        <button class="option-button">Blue</button>
+                        <button class="option-button">Classic</button>
+                    </div>
+                    <p class="total">Total: $210</p>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="submit-order">
+            <button>Submit Order</button>
+        </div>
+    </main>
+
+    <footer>
+        <h4>My Shop</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 22C Somewhere, Ha Noi</p>
+        <p><i class="fa-solid fa-phone"></i> 09876543210</p>
+    </footer>
+</body>
+</html>

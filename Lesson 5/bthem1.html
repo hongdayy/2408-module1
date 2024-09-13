@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Bài tập 4</title>
+		<style>
+			body, html {
+				margin: 0;
+				padding: 0;
+				font-family: Arial, sans-serif;
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+				font-size: 15px;
+			}
+	
+			header {
+				background-color: #FFF2CC;
+				padding: 10px;
+				margin: 10px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+	
+			.logo {
+				display: flex;
+				align-items: center;
+			}
+	
+			.logo::before {
+				content: '';
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background-color: #E1D5E7;
+                border:1px solid #C1ABCB ;
+				margin-right: 10px;
+			}
+	
+			nav {
+				display: flex;
+				align-items: center;
+			}
+	
+			nav a {
+				margin: 0 10px;
+				text-decoration: none;
+				color: #000;
+			}
+	
+			.cart {
+				background-color: #d9eaff;
+                border: 1px solid lightskyblue;
+				padding: 5px 15px;
+				border-radius: 5px;
+				cursor: pointer;
+				margin-left: 10px;
+			}
+	
+			main {
+				display: flex;
+				flex: 1;
+				padding: 20px;
+			}
+	
+			aside {
+				width: 150px;
+				padding: 10px;
+				background-color: #fff;
+				margin-right: 20px;
+			}
+	
+			.categories {
+				border: 1px solid black;
+				padding: 10px ;
+                margin-top: -10px;
+                
+			}
+	
+			.product-section {
+				flex-grow: 1;
+			}
+	
+            .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.search-bar .input-container {
+    position: relative;
+    width: 30%; 
+}
+
+.search-bar input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    padding-right: 40px; 
+    border: 1px solid lightgray;
+    outline: none;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #000;
+}
+.sort-options select {
+    padding: 10px;
+    border: 1px solid lightgrey; 
+    border-radius: 5px;
+    background-color: #fff;
+    color: lightgray;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+
+}
+input[type="checkbox"] {
+    accent-color: #009587; 
+   
+}
+
+
+
+
+            
+	        .categories button {
+                border: 1px solid #009587;
+                background-color: #B0E3E6;
+                border-radius: 4px;
+                padding: 4px;
+                margin: 10px 4px;
+            }
+			.product-list {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 20px;
+			}
+	
+			.product {
+				text-align: left;
+				border: 1px solid #fff;
+				padding: 10px;
+				background-color: #fff;
+			}
+	
+			.image-placeholder {
+			
+				width: 70%;
+				height: 180px;
+				background-color: #F5F5F5;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #aaa;
+				margin-bottom: 10px;
+			}
+	
+			.price .discount  {
+				color: red;
+				border: none;
+				margin-left: 90px;
+				margin-top: -17px;
+			
+				
+			}
+	
+			
+	
+			.pagination {
+				display: flex;
+				justify-content: left;
+				margin-top: 20px;
+			}
+	
+			.pagination button {
+				margin: 6px;
+              
+				border: 1px solid #ccc;
+				background-color: #fff;
+				cursor: pointer;
+			}
+			.pagination button:hover {
+				background-color: lightgrey;
+			}
+            .discount select {
+                outline: none;
+
+            }
+	
+			footer {
+				background-color: #FFF2CC;
+				padding: 10px;
+				margin: 10px;
+				text-align: left;
+			}
+	
+			footer p {
+				margin: 5px 0;
+				display: inline-block;
+			}
+	
+			footer p + p {
+				margin-left: 20px;
+			}
+			footer h4 {
+				margin: 0 2px;
+				
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo">My Shop</div>
+			<nav>
+				<a href="#">Home</a>
+				<a href="#">About us</a>
+				<a href="#">Contact</a>
+				<div class="cart">My Cart (0)</div>
+			</nav>
+		</header>
+		
+		<main>
+			<aside>
+				<div class="categories">
+					<h4>Categories</h4>
+					<label><input type="checkbox" checked > Devices</label><br>
+					<label><input type="checkbox" checked> Furnitures</label><br>
+					<label><input type="checkbox" checked> Cloths</label><br>
+					<label><input type="checkbox" checked> Foods & Drink</label><br>
+					<label><input type="checkbox" checked> Materials</label><br>
+					<label><input type="checkbox" checked> Computers</label><br>
+					<button>Show more ...</button>
+				</div>
+			</aside>
+	
+			<section class="product-section">
+                <div class="search-bar">
+                    <div class="input-container">
+                        <input type="text" placeholder="Enter keyword to search">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="sort-options">
+                        <select>
+                            <option>Sort by</option>
+                        </select>
+                        <select>
+                            <option>Order by</option>
+                        </select>
+                    </div>
+                </div>
+	
+				<div class="product-list">
+					<div class="product">
+						<div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+						<p class="product-name"><b>Lorem ipsum dolor</b></p>
+						<p class="price" style="color: blue;">$129.01 <select class="discount"><option>10%</option></select></p>
+					</div>
+					
+	
+					<div class="product">
+						<div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+						<p class="product-name"><b>Lorem ipsum dolor</b></p>
+						<p class="price" style="color: blue;">$129.01 <select class="discount"><option>10%</option></select></p>
+					</div>
+	
+					<div class="product">
+						<div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+						<p class="product-name"><b>Lorem ipsum dolor</b></p>
+						<p class="price" style="color: blue;">$129.01 <select class="discount"><option>10%</option></select></p>
+					</div>
+					
+					<div class="product">
+						<div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+						<p class="product-name"><b>Lorem ipsum dolor</b></p>
+						<p class="price" style="color: blue;">$129.01 <select class="discount"><option>10%</option></select></p>
+					</div>
+					<div class="product">
+						<div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+						<p class="product-name"><b>Lorem ipsum dolor</b></p>
+						<p class="price" style="color: blue;">$129.01 <select class="discount"><option>10%</option></select></p>
+					</div>
+	
+					<div class="product">
+						<div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+						<p class="product-name"><b>Lorem ipsum dolor</b></p>
+						<p class="price" style="color: blue;">$129.01 <select class="discount"><option>10%</option></select></p>
+					</div>
+
+					<div class="product">
+						<div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+						<p class="product-name"><b>Lorem ipsum dolor</b></p>
+						<p class="price" style="color: blue;">$129.01 <select class="discount"><option>10%</option></select></p>
+					</div>
+					<div class="product">
+						<div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+						<p class="product-name"><b>Lorem ipsum dolor</b></p>
+						<p class="price" style="color: blue;">$129.01 <select class="discount"><option>10%</option></select></p>
+					</div>
+	
+				   
+	
+				</div>
+				
+				<div class="pagination">
+					<button>1</button>
+					<button>2</button>
+					<button>3</button>
+					<button>...</button>
+					<button>50</button>
+				</div>
+			</section>
+		</main>
+	
+		<footer>
+			<h4>My Shop</h4>
+			<p><i class="fa-solid fa-location-dot"></i> 22C Somewhere, Ha Noi</p>
+            <p><i class="fa-solid fa-phone"></i> 09876543210</p>
+			
+		</footer>
+	</body>
+</html>

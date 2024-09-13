@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-size: 15px;
+        }
+
+        header {
+            background-color: #FFF2CC;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo::before {
+            content: '';
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #E1D5E7;
+            border: 1px solid #C1ABCB;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .cart {
+            background-color: #d9eaff;
+            border: 1px solid lightskyblue;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .product-images {
+            width: 40%;
+            padding: 30px;
+        }
+
+        .thumbnails {
+            display: flex;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 100px;
+            background-color: #F5F5F5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            margin: 8px 0;
+        }
+
+        .product-details {
+            width: 60%;
+            padding: 20px;
+        }
+
+        .product-details h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product-details p {
+            margin-bottom: 10px;
+        }
+
+        .color-options, .design-options {
+            margin-bottom: 10px;
+        }
+
+        .color-options button, .design-options button {
+            margin-right: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+
+        .color-options button:hover {
+            background-color: #B0E3E6;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .discount {
+            color: red;
+            font-weight: bold;
+        }
+
+        .in-stock {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .label span {
+            margin-left: 10px;
+            font-weight: normal;
+        }
+
+        .add-to-cart {
+            margin-top: 10px;
+        }
+
+        .add-to-cart input {
+            width: 50px;
+            padding: 5px;
+        }
+
+        .add-to-cart button {
+            background-color: #FFCCCC;
+            padding: 5px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .comments {
+            margin-top: 30px;
+            margin-left: 45px;
+        }
+
+        .comment {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 95%;
+        
+        }
+
+        .comment .user {
+            display: flex;
+            align-items: center;
+        }
+
+        .comment .user::before {
+            content: '';
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #E1D5E7;
+            margin-right: 10px;
+        }
+
+        .comment .user {
+    display: flex;
+    justify-content: space-between; /* Chia đều không gian giữa tên và rating */
+    align-items: center; 
+}
+
+.rating {
+
+    margin-left: auto; 
+}
+
+
+        .pagination {
+            display: flex;
+            justify-content: left;
+            margin-top: 20px;
+            margin-left: 30px;
+            padding: 10px;
+        }
+
+        .pagination button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: left;
+        }
+
+        footer {
+            background-color: #FFF2CC;
+            padding: 10px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        footer p {
+            margin: 5px 0;
+            display: inline-block;
+        }
+
+        footer p + p {
+            margin-left: 20px;
+        }
+
+        footer h4 {
+            margin: 0 2px;
+        }
+
+        .design-options button:hover {
+            background-color: #B0E3E6;
+        }
+        .pagination button:hover {
+				background-color: lightgrey;
+			}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">My Shop</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Contact</a>
+            <div class="cart">My Cart (0)</div>
+        </nav>
+    </header>
+    <main>
+        <div class="product-images">
+            <div class="product">
+                <div class="image-placeholder" style="border: 1px solid black; height: 40vh; margin: 40px 0;">IMAGE</div>
+            </div>
+            <div class="thumbnails">
+                <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+                <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+                <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+                <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h1>Lorem ipsum dolor</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est recusandae pariatur eveniet reiciendis, odit deserunt labore aliquam voluptatem totam fugiat, rerum commodi eius fugit dolorum, iusto nisi odio quod accusantium.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, iure ullam iusto in temporibus odit provident ea adipisci ipsa alias minima ratione dolores corporis inventore debitis quam assumenda officiis delectus.
+            </p>
+
+            <div class="color-options">
+                <p>Color</p>
+                <button>Blue</button>
+                <button>Red</button>
+                <button>Green</button>
+            </div>
+
+            <div class="design-options">
+                <p>Design</p>
+                <button>Classic</button>
+                <button>Modern</button>
+            </div>
+
+            <p class="label">Price: <span class="price">$129.01</span></p>
+            <p class="label">Discount: <span class="discount">10%</span></p>
+            <p class="label">Rating:</p>
+            <p class="label">In Stocks: <span class="in-stock">1004</span></p>
+
+            <div class="add-to-cart">
+                <input type="number" value="0">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="comments">
+        <h2>Comments</h2>
+        <div class="comment">
+            <div class="user">
+                <p><b>Customer 1 </b><br><span style="color: lightgrey;"><i>Ha Noi</i></span></p>
+                <p class="rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+            </div>
+            <p><i>2022-10-10 19:40:01</i></p>
+            <p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+           
+        </div>
+
+        <div class="comment">
+            <div class="user">
+                <p><b>Customer 1 </b><br><span style="color: lightgrey;"><i>Ha Noi</i></span></p>
+                <p class="rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+            </div>
+            <p><i>2022-10-10 19:40:01</i></p>
+            <p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+           
+        </div>
+    </div>
+
+    <div class="pagination">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+    </div>
+
+    <footer>
+        <h4>My Shop</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 22C Somewhere, Ha Noi</p>
+        <p><i class="fa-solid fa-phone"></i> 09876543210</p>
+    </footer>
+</body>
+</html>

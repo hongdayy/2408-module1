@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F0F0F0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+       .container {
+        display: flex;
+        background-color: white;
+        border-radius: 5px;
+        
+       }
+       .card {
+        border: 1px solid  lightgray;
+        padding: 10px;
+        width: 150px;
+        margin: 10px;
+        border-radius: 5px;
+        text-align: center;
+       }
+       .card p {
+        color: grey;
+       }
+       .card button {
+        background-color: #4CAF50;
+        border: none;
+        color: #fafafa;
+        padding: 8px;
+        border-radius: 4px;
+
+       }
+       @media (max-width: 768px) {
+            .container{
+                flex-direction: column;
+            }
+        }
+        @media(max-width: 480px) {
+            .card {
+                height: 210px;
+            }
+
+        }
+
+    </style>
+    <div class="container">
+        <div class="card">
+            <h3>Basic</h3>
+            <p>For individuals</p>
+            <h2>$10/month</h2>
+            <button>Choose Plan</button>
+        </div>
+
+        <div class="card">
+            <h3>Pro</h3>
+            <p>For small teams</p>
+            <h2>$20/month</h2>
+            <button>Choose Plan</button>
+        </div>
+
+        <div class="card">
+            <h3>Basic</h3>
+            <p>For large <br> companies</p>
+            <h2>$50/month</h2>
+            <button>Choose Plan</button>
+        </div>
+    </div>
+</body>
+</html>

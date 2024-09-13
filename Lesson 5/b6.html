@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F0F0F0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            display: flex;
+            background-color: #fafafa;
+            padding: 10px;
+            
+
+        }
+        .card {
+            padding: 20px;
+            border-left: 1px solid lightgrey;
+            margin: 10px;
+        }
+        .card p {
+            color: gray;
+        }
+        @media screen and (max-width: 768px) {
+            .container{
+              
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .card {
+                font-size: 13px;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="card">
+            <h3>Article Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Sed ullamcorper sodales dui, non <br> malesuada sapien gravida a. Fusce dapibus velit<br> id augue egestas, vel vehicula libero<br> malesuada...
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Another Article Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Sed ullamcorper sodales dui, non <br> malesuada sapien gravida a. Fusce dapibus velit<br> id augue egestas, vel vehicula libero<br> malesuada...
+            </p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

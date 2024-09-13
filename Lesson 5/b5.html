@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+           
+        }
+        .image {
+            padding: 10px;
+          
+        }
+        @media screen and (max-width: 768px) {
+            .container{
+               flex-direction: column;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .image img {
+                width: 80%;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="image">
+            <img src="https://www.laminationsonline.com/wp-content/uploads/2019/03/placeholder-400x300-300x225.png" alt="">
+
+        </div>
+        <div class="image">
+            <img src="https://www.laminationsonline.com/wp-content/uploads/2019/03/placeholder-400x300-300x225.png" alt="">
+
+        </div>
+        <div class="image">
+            <img src="https://www.laminationsonline.com/wp-content/uploads/2019/03/placeholder-400x300-300x225.png" alt="">
+
+        </div>
+    </div>
+</body>
+</html>

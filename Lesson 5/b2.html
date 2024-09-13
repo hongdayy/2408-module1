@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: #f9f9f9;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+            padding: 10px;
+        }
+        .item {
+            margin: 10px;
+            border: 1px solid #F0F0F0;
+            background-color: #F0F0F0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(40% - 20px); /* 2 item 1 hàng trừ 20px margin padding và 10% hai phía ngoài*/
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: 768px) {
+            .item {
+                width: calc(30% - 20px); /* Chiều rộng cho 2.5 item trên mỗi hàng */
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .item {
+                width: calc(100% - 20px); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+</body>
+</html>
