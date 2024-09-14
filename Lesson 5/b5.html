@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
     <style>
         body {
             margin: 0;
@@ -14,38 +12,50 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-color: #f0f0f0;
         }
         .container {
             display: flex;
-           
         }
         .image {
             padding: 10px;
-          
+        }
+        .image-placeholder {
+            width: 200px;
+            height: 150px;
+            background-color: #CCCCCC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 20px;
+            border-radius: 5px;
         }
         @media screen and (max-width: 768px) {
-            .container{
-               flex-direction: column;
+            .container {
+                flex-direction: column;
             }
-        }
-        @media screen and (max-width: 480px) {
-            .image img {
+            .image-placeholder {
                 width: 80%;
             }
         }
+        @media screen and (max-width: 480px) {
+            .image-placeholder {
+                width: 100%;
+            }
+        }
     </style>
+</head>
+<body>
     <div class="container">
         <div class="image">
-            <img src="https://www.laminationsonline.com/wp-content/uploads/2019/03/placeholder-400x300-300x225.png" alt="">
-
+            <div class="image-placeholder">400 x 300</div>
         </div>
         <div class="image">
-            <img src="https://www.laminationsonline.com/wp-content/uploads/2019/03/placeholder-400x300-300x225.png" alt="">
-
+            <div class="image-placeholder">400 x 300</div>
         </div>
         <div class="image">
-            <img src="https://www.laminationsonline.com/wp-content/uploads/2019/03/placeholder-400x300-300x225.png" alt="">
-
+            <div class="image-placeholder">400 x 300</div>
         </div>
     </div>
 </body>
