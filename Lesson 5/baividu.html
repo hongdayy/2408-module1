@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+      
+        }
+        .container {
+            display: flex;
+        }
+        .image {
+            padding: 10px;
+        }
+        .image-placeholder {
+            width: 200px;
+            height: 150px;
+            background-color: #CCCCCC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+  
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .red { order: 3; }
+            .green { order: 1; }
+            .yellow { order: 2; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image red">
+            <div class="image-placeholder" style="background-color: red;"></div>
+        </div>
+        <div class="image green">
+            <div class="image-placeholder" style="background-color: green;"></div>
+        </div>
+        <div class="image yellow">
+            <div class="image-placeholder" style="background-color: yellow;"></div>
+        </div>
+    </div>
+</body>
+</html>
