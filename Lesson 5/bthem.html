@@ -70,7 +70,6 @@
             display: flex;
             flex: 1;
             padding: 20px;
-           
         }
 
         aside {
@@ -160,70 +159,10 @@
             border: 1px solid #fff;
             padding: 10px;
             background-color: #fff;
+            position: relative;
         }
 
         .image-placeholder {
-            width: 100%;
-            height: 180px;
-            background-color: #F5F5F5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #aaa;
-            margin-bottom: 10px;
-        }
-
-        .price .discount {
-            color: red;
-            border: none;
-            margin-left: 90px;
-            margin-top: -17px;
-        }
-
-        .pagination {
-            display: flex;
-            justify-content: left;
-            margin-top: 20px;
-        }
-
-        .pagination button {
-            margin: 6px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            cursor: pointer;
-        }
-
-        .pagination button:hover {
-            background-color: lightgrey;
-        }
-
-        .discount select {
-            outline: none;
-        }
-
-        footer {
-            background-color: #FFF2CC;
-            padding: 10px;
-            margin: 10px;
-            text-align: left;
-        }
-
-        footer p {
-            margin: 5px 0;
-            display: inline-block;
-        }
-
-        footer p + p {
-            margin-left: 20px;
-        }
-
-        footer h4 {
-            margin: 0 2px;
-        }
-
-       
-
-.image-placeholder {
             width: 100%;
             height: 180px;
             background-color: #F5F5F5;
@@ -246,7 +185,6 @@
             right: 0;
             top: 0;
             margin-right: 0;
-            border: none;
         }
 
         .discount select {
@@ -259,13 +197,43 @@
             margin-top: 20px;
         }
 
-       
+        .pagination button {
+            margin: 6px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .pagination button:hover {
+            background-color: lightgrey;
+        }
+
+        footer {
+            background-color: #FFF2CC;
+            padding: 10px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        footer p {
+            margin: 5px 0;
+            display: inline-block;
+        }
+
+        footer p + p {
+            margin-left: 20px;
+        }
+
+        footer h4 {
+            margin: 0 2px;
+        }
+
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 text-align: center;
             }
-
+        
             .logo, nav {
                 margin: 10px 0;
             }
@@ -298,7 +266,6 @@
             }
         }
 
-        /* Responsive styles for mobile phones */
         @media (max-width: 480px) {
             body {
                 font-size: 14px;
@@ -336,7 +303,6 @@
                 justify-content: center;
             }
         }
-
 
     </style>
 </head>
@@ -385,47 +351,29 @@
                 <div class="product">
                     <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
                     <p class="product-name"><b>Lorem ipsum dolor</b></p>
-                    <p class="price" style="color: blue;">$129.01 <select class="discount-percentage"><option>10%</option></select></p>
+                    <p class="price" style="color: blue;">$129.01 <span class="discount-percentage">10%</span><select class="discount"><option>▼</option></select></p>
+                    <button>Add to Cart</button>
                 </div>
 
                 <div class="product">
                     <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
                     <p class="product-name"><b>Lorem ipsum dolor</b></p>
-                    <p class="price" style="color: blue;">$129.01 <select class="discount-percentage"><option>10%</option></select></p>
-                </div>
-
-               <div class="product">
-                    <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
-                    <p class="product-name"><b>Lorem ipsum dolor</b></p>
-                    <p class="price" style="color: blue;">$129.01 <select class="discount-percentage"><option>10%</option></select></p>
+                    <p class="price" style="color: blue;">$129.01 <span class="discount-percentage">10%</span><select class="discount"><option>▼</option></select></p>
+                    <button>Add to Cart</button>
                 </div>
 
                 <div class="product">
                     <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
                     <p class="product-name"><b>Lorem ipsum dolor</b></p>
-                    <p class="price" style="color: blue;">$129.01 <select class="discount-percentage"><option>10%</option></select></p>
-                </div>
-                <div class="product">
-                    <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
-                    <p class="product-name"><b>Lorem ipsum dolor</b></p>
-                    <p class="price" style="color: blue;">$129.01 <select class="discount-percentage"><option>10%</option></select></p>
+                    <p class="price" style="color: blue;">$129.01 <span class="discount-percentage">10%</span><select class="discount"><option>▼</option></select></p>
+                    <button>Add to Cart</button>
                 </div>
 
                 <div class="product">
                     <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
                     <p class="product-name"><b>Lorem ipsum dolor</b></p>
-                    <p class="price" style="color: blue;">$129.01 <select class="discount-percentage"><option>10%</option></select></p>
-                </div>
-
-                <div class="product">
-                    <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
-                    <p class="product-name"><b>Lorem ipsum dolor</b></p>
-                    <p class="price" style="color: blue;">$129.01 <select class="discount-percentage"><option>10%</option></select></p>
-                </div>
-                <div class="product">
-                    <div class="image-placeholder" style="border: 1px solid black;">IMAGE</div>
-                    <p class="product-name"><b>Lorem ipsum dolor</b></p>
-                    <p class="price" style="color: blue;">$129.01 <select class="discount-percentage"><option>10%</option></select></p>
+                    <p class="price" style="color: blue;">$129.01 <span class="discount-percentage">10%</span><select class="discount"><option>▼</option></select></p>
+                    <button>Add to Cart</button>
                 </div>
             </div>
 
@@ -433,16 +381,16 @@
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
-                <button>...</button>
-                <button>50</button>
+                <button>Next</button>
             </div>
         </section>
     </main>
 
     <footer>
         <h4>My Shop</h4>
-        <p><i class="fa-solid fa-location-dot"></i> 22C Somewhere, Ha Noi</p>
-        <p><i class="fa-solid fa-phone"></i> 09876543210</p>
+        <p>Address: 123 Main St</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@myshop.com</p>
     </footer>
 </body>
 </html>
