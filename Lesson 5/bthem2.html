@@ -242,6 +242,54 @@
         .pagination button:hover {
 				background-color: lightgrey;
 			}
+
+        /* Add responsive styling */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .product-images, .product-details {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .product-images {
+                order: 2;
+            }
+
+            .product-details {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header, footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+
+            .product-details h1 {
+                font-size: 18px;
+            }
+
+            .comment {
+                width: 100%;
+            }
+
+            .image-placeholder {
+                height: 60px;
+            }
+        }
     </style>
 </head>
 <body>
